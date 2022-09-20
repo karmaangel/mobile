@@ -1,0 +1,77 @@
+{
+  "classId": "idm.component.mobile.icommentpublish",
+  "comName": "评论编辑",
+  "className": "ICommentPublish",
+  "comType": "common",
+  "comLangue": "vue",
+  "compositeAttr": [
+    {
+      "type": "input",
+      "layoutType": "inline",
+      "text": "唯一标识",
+      "bindKey": "ctrlId",
+      "disabled": true,
+      "default": "@[packageid]",
+      "desc": "",
+      "helpUrl": ""
+    },
+    {
+      "type": "group",
+      "text": "基本属性",
+      "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+      "children": [
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "图片显示",
+          "desc":"图片是否显示",
+          "bindKey": "showImg",
+          "default": true
+        },
+        {
+          "type": "uploadImage",
+          "layoutType": "inline",
+          "text": "图片地址",
+          "bindKey": "topImgUrl",
+          "placeholder": "可输入图片地址或直接上传"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "个人页签",
+          "desc":"个人页签是否显示",
+          "bindKey": "selfShow",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "高级",
+      "desc": "点击？查看高级设置用法指南",
+      "children": [
+        {
+          "type": "treeSelect",
+          "layoutType": "inline",
+          "text": "数据源",
+          "desc": "数据返回示例：{value: [], count: 0, moreUrl: ''}",
+          "bindKey": "dataSource",
+          "dataSourceUrl": "/ctrl/dataSource/getDatasourceByGroup"
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "刷新KEY",
+          "bindKey": "messageRefreshKey",
+          "desc": "根据组件接收到消息的刷新KEY来刷新数据",
+          "multiple": true,
+          "placeholder": "请选择刷新KEY",
+          "ctrlAttrObject": {
+            "mode": "tags"
+          },
+          "dictionary": []
+        }
+      ]
+    }
+  ]
+}

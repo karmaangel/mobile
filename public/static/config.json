@@ -261,6 +261,13 @@
       "className": "IDigitalStatistics",
       "comType": "common",
       "comLangue": "vue"
+    },
+    {
+      "classId": "idm.component.mobile.icommentpublish",
+      "comName": "评论发布",
+      "className": "ICommentPublish",
+      "comType": "common",
+      "comLangue": "vue"
     }
   ]
 }
